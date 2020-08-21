@@ -1,0 +1,10 @@
+node_modules/
+.babelrc
+.gitignore
+.travis.yml
+lib/
+option/
+runtime/
+index.js
+rollup.config.js
+babel.config.js

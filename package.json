@@ -1,14 +1,25 @@
 {
   "name": "miniapp-vue",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "像使用vue2.0一样编写微信小程序",
-  "main": "index.js",
+  "main": "build/minivue.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "author": "黄武韬",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "rollup": "^2.26.4",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "dependencies": {}
 }
