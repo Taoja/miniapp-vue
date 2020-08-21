@@ -1,0 +1,14 @@
+{
+  "name": "miniapp-vue",
+  "version": "1.0.0",
+  "description": "像使用vue2.0一样编写微信小程序",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "黄武韬",
+  "license": "ISC"
+}
