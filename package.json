@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "rollup -c --watch"
   },
   "author": "黄武韬",
   "license": "ISC",

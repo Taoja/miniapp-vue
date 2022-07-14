@@ -11,6 +11,7 @@ export default class Render {
     this.setComputed()
     this.setWatch()
     this.setMethods()
+    this.setBehavior()
     Page(this.options)
   }
   /**
@@ -36,6 +37,13 @@ export default class Render {
       ...methods
     }
   }
+  /**
+   * 通过behaviors插入自己默认的初始化runtime脚本
+   */
+     setBehavior() {
+      var { behaviors } = this.config
+      this.options.behaviors = behaviors || []
+    }
   /**
    * 把mixins的配置，拼入各个参数中
    */
@@ -101,6 +109,7 @@ export default class Render {
     init.setComputed()
     init.setWatch()
     init.setMethods()
+    init.setBehavior()
     Page(init.options)
     return init
   }
