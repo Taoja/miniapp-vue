@@ -787,6 +787,7 @@ var Render$1 = /*#__PURE__*/function () {
     this.setComputed();
     this.setWatch();
     this.setMethods();
+    this.setBehavior();
     Page(this.options);
   }
   /**
@@ -816,6 +817,16 @@ var Render$1 = /*#__PURE__*/function () {
     value: function setMethods() {
       var methods = this.config.methods;
       this.options = _objectSpread$1(_objectSpread$1({}, this.options), methods);
+    }
+    /**
+     * 通过behaviors插入自己默认的初始化runtime脚本
+     */
+
+  }, {
+    key: "setBehavior",
+    value: function setBehavior() {
+      var behaviors = this.config.behaviors;
+      this.options.behaviors = behaviors || [];
     }
     /**
      * 把mixins的配置，拼入各个参数中
@@ -905,6 +916,7 @@ var Render$1 = /*#__PURE__*/function () {
       init.setComputed();
       init.setWatch();
       init.setMethods();
+      init.setBehavior();
       Page(init.options);
       return init;
     }
